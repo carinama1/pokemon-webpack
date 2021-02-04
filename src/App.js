@@ -3,10 +3,10 @@ import theme from "./theme";
 import { useRoutes } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core";
 import GlobalStyles from "./components/GlobalStyles";
-import Loading from "./components/Loading";
 import routes from "./routes";
 import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/react-hooks";
+import fetch from "cross-fetch";
 
 const App = () => {
   const routing = useRoutes(routes);
@@ -21,10 +21,8 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Suspense fallback={<Loading />}>
-        <GlobalStyles />
-        <ApolloProvider client={client}>{routing}</ApolloProvider>
-      </Suspense>
+      <GlobalStyles />
+      <ApolloProvider client={client}>{routing}</ApolloProvider>
     </ThemeProvider>
   );
 };

@@ -133,7 +133,7 @@ const ListView = () => {
                     className={classes.buttonMain}
                     onClick={handleLoadMore}
                   >
-                    Load More
+                    Load Mores
                   </Button>
                 )}
               </Box>
