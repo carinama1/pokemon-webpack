@@ -257,7 +257,7 @@ export const CatchingPage = ({ seeMyPokemon, pokemon, ...rest }) => {
           </Typography>
           {!succes && (
             <Button className={classes.buttonMain} onClick={tryAgain}>
-              TRY AGAIN
+              TRY AGAINs
             </Button>
           )}
           {succes && (
